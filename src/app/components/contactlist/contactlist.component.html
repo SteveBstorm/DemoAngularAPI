@@ -1,0 +1,14 @@
+<nb-layout-column>
+<h3>Liste de contact</h3>
+<nb-list>
+    <nb-list-item *ngFor="let item of listeContact; let i = index">
+        <a [routerLink]="['/details', item.Id]">{{item.Nom}}</a> &nbsp;
+            <button nbButton status="warning" (click)="update(item.Id)">Modifier</button> &nbsp;
+            <button nbButton status="danger" (click)="delete(item.Id, item.Nom)">X</button>
+        
+    </nb-list-item>
+</nb-list>
+</nb-layout-column>
+<nb-layout-column>
+    <app-contact-details></app-contact-details>
+</nb-layout-column>

@@ -1,0 +1,7 @@
+<h3>Modifier Contact</h3>
+<form [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <p>Nom : <input nbInput formControlName="Nom"></p>
+    <p>Email : <input nbInput formControlName="Email"></p>
+    <p>GSM : <input nbInput formControlName="GSM"></p>
+    <button nbButton type="submit" [disabled]="fg.invalid">Modifier</button>
+</form>
